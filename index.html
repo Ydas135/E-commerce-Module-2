@@ -26,7 +26,18 @@
         <div class="flex items-center gap-6">
             <span>Enviar a Arequipa</span>
         <ul class="flex gap-6 list-none">
-            <li><a href="#" class="flex items-center gap-1 cursor-pointer">Categorías</a></li>
+            <li class="relative group">
+                <span class="cursor-pointer hover:text-gray-700 transition">
+                    Categorias
+                </span>
+                <ul class="absolute left-0 top-6 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Electrònica</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ropa</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Hogar</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Deportes</li>
+                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Juguetes</li>
+                </ul>
+            </li>
             <li><a href="#" class="hover:text-gray-700 transition">Ofertas</a></li>
             <li><a href="#">Cupones</a></li>
             <li><a href="#">Tiendas oficiales</a></li>
@@ -50,6 +61,60 @@
             </div>
         </div>
     </nav>
-    
+    <section class="px-6 py-6">
+        <h2 class="text-xl font-semibold mb-4">
+            Ofertas
+        </h2>
+        <div class="flex gap-4 overflow-x-auto">
+            <div class="min-w-[200px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="text-sm mt-2 line-clamp-2">
+                Producto ejemplo bastante largo para probar
+                </h3>
+                <p class="text-green-600 font-bold text-lg">
+                S/ 99.90
+                </p>
+            </div>
+            <div class="min-w-[1000px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="text-sm mt-2 line-clamp-2">
+                Producto ejemplo bastante largo para probar
+                </h3>
+                <p class="text-green-600 font-bold text-lg">
+                S/ 99.90
+                </p>
+            </div>
+            <div class="min-w-3xl bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="text-sm mt-2 line-clamp-2">
+                Producto ejemplo bastante largo para probar
+                </h3>
+                <p class="text-green-600 font-bold text-lg">
+                S/ 99.90
+                </p>
+            </div>
+            <div class="min-w-3xl bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="text-sm mt-2 line-clamp-2">
+                Producto ejemplo bastante largo para probar
+                </h3>
+                <p class="text-green-600 font-bold text-lg">
+                S/ 99.90
+                </p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
