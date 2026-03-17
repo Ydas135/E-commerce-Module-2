@@ -1,0 +1,25 @@
+{
+  "name": "e-commerce-module-2",
+  "version": "1.0.0",
+  "description": "Pagina Web Front-End e-commerce by HTML, CSS(tailwind) and JS",
+  "main": "index.js",
+  "scripts": {
+  "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ydas135/E-commerce-Module-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ydas135/E-commerce-Module-2/issues"
+  },
+  "homepage": "https://github.com/Ydas135/E-commerce-Module-2#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
