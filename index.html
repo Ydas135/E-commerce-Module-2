@@ -32,11 +32,14 @@
                     Categorias
                 </span>
                 <ul class="absolute left-0 top-6 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Electrònica</li>
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Ropa</li>
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Hogar</li>
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Deportes</li>
-                    <li class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Juguetes</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Electrònica</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Ropa</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Hogar</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Deportes</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Juguetes</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer" data-cat="all">
+                    Todos
+                    </li>
                 </ul>
             </li>
             <li><a href="#" class="hover:text-gray-700 transition">Ofertas</a></li>
@@ -270,20 +273,33 @@
         </section>
     </main>
     <div id="modalCarrito"
-    class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
-        <div class="bg-white p-6 rounded-md w-[400px]">
-            <h2 class="text-xl font-bold mb-4">Tu carrito</h2>
-            <div id="listaCarrito" class="mb-4"></div>
-                <p id="total" class="font-bold mb-4"></p>
+        class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+        <div class="bg-white w-[400px] max-h-[80vh] rounded-xl shadow-lg p-5 animate-fadeIn">
+            <!-- HEADER -->
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-lg font-bold">🛒 Tu carrito</h2>
+                <button id="cerrar" class="text-gray-500 hover:text-black text-xl">
+                    X
+                </button>
+            </div>
+            <!-- LISTA -->
+            <div id="listaCarrito" class="overflow-y-auto max-h-[300px] pr-2"></div>
+            <!-- TOTAL -->
+            <p id="total" class="font-bold text-lg mt-4"></p>
+            <!-- BOTONES -->
+            <div class="flex gap-2 mt-4">
                 <button id="comprar"
-                class="bg-green-500 text-white px-4 py-2 rounded">
-                Comprar
+                class="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded">
+                    Comprar
                 </button>
-                <button id="cerrar" class="ml-2">
-                Cerrar
+                <button id="vaciar"
+                class="flex-1 bg-gray-200 hover:bg-gray-300 py-2 rounded">
+                    Vaciar
                 </button>
+            </div>
         </div>
     </div>
+    
   <script src="app.js"></script>
 </body>
     
