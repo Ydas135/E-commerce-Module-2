@@ -12,7 +12,8 @@
             <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/7.19.0/mercadolibre/modal-logo-120x120.jpg" alt="" class="w-20">
         </div>
         <div class="flex flex-1 mx-6 items-center bg-white border rounded-md overflow-hidden">
-            <input 
+            <input
+            id="buscador" 
             type="text" 
             placeholder="Buscar productos, marcas y màs"
             class="w-full outline-none px-4 py-2">
@@ -53,68 +54,237 @@
             <button class="text-x1">
                 🔔
             </button>
-            <div class="relative cursor-pointer">
+            <div id="iconoCarrito" class="relative cursor-pointer">
                 <span class="text-xl">🛒</span>
-                <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded-full">
+                <span id="contadorCarrito" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1 rounded-full">
                     0
                 </span>
             </div>
+            <div id="iconoCarrito"></div>
+            
         </div>
     </nav>
     <section class="px-6 py-6">
         <h2 class="text-xl font-semibold mb-4">
             Ofertas
         </h2>
-        <div class="flex gap-4 overflow-x-auto">
-            <div class="min-w-[200px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+        <div class="flex gap-4 overflow-x-auto w-full ">
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
                 <img 
-                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnx5OwkZazOdtlpm5vZCy3xMTKklGXGOWCpdSfKS3vKw&s=10" 
                 class="w-full h-40 object-cover rounded"
                 >
-                <h3 class="text-sm mt-2 line-clamp-2">
-                Producto ejemplo bastante largo para probar
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Laptop Gamer MSI GF63 Thin 11SC-693XPE Intel Core i5-11400H 16GB RAM 512GB SSD NVIDIA GeForce GTX1650 15.6" FHD FreeDOS
                 </h3>
-                <p class="text-green-600 font-bold text-lg">
-                S/ 99.90
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 10000.00
                 </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
             </div>
-            <div class="min-w-[1000px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+            <div class="producto min-w-[150px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
                 <img 
-                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSzJMyly1ygB8QMtjeA2qEAluMjqVf-KuHN92UMerFMySWkF5PDvWsgItNls80WSSLTwTN7anL23JJbM3CDDTUhdIBQZElRFZ_iY0egBT_pAPaVZSWvnYiabA&usqp=CAc" 
                 class="w-full h-40 object-cover rounded"
                 >
-                <h3 class="text-sm mt-2 line-clamp-2">
-                Producto ejemplo bastante largo para probar
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Telefono Xiaomi Redmi Note 12 Pro 5G 128GB 8GB RAM Onyx Gray
                 </h3>
-                <p class="text-green-600 font-bold text-lg">
-                S/ 99.90
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 899.90
                 </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
             </div>
-            <div class="min-w-3xl bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
                 <img 
-                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSmcLRQuGn987tyHEMYjoHou-v4qlLEOBl6p-xn3DFAiXxHObkoc3TJLNrFl1EWE4d5Dcycs9pVTQZwOKFjwZovEqbWAYnkyJuCYN6bOHb7P-HHasm6uCPRBtHWepuv4FFScrazmDE&usqp=CAcRequest Method GET" 
                 class="w-full h-40 object-cover rounded"
                 >
-                <h3 class="text-sm mt-2 line-clamp-2">
-                Producto ejemplo bastante largo para probar
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Parlantes Bluetooth JBL Flip 5 Original
                 </h3>
-                <p class="text-green-600 font-bold text-lg">
-                S/ 99.90
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 300.00
                 </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
             </div>
-            <div class="min-w-3xl bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
                 <img 
-                src="https://http2.mlstatic.com/D_NQ_NP715662-MLA97528638576_112025-O.webp" 
+                src="data:image/jpeg;base64,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" 
                 class="w-full h-40 object-cover rounded"
                 >
-                <h3 class="text-sm mt-2 line-clamp-2">
-                Producto ejemplo bastante largo para probar
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Tarjeta de video Zotac Gaming GeForce RTX 3060 Twin Edge OC 12GB GDDR6
                 </h3>
-                <p class="text-green-600 font-bold text-lg">
-                S/ 99.90
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 1800.00
                 </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
+            </div>
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQbmnltibvqoatYdvAnxk-73ZzM7yI8-7sH72Kbd4ikHUpbKlwWP0gANPhIUYepa9hwLau6VYdaVZdjMcc1Y1jhkaK1caHEI3bMU3w-_Ej3&usqp=CAc" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Ropero de melamine 2 puertas 4 estantes color blanco
+                </h3>
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 550.00
+                </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
+            </div>
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRXhKX4MoQAZGFqEMypW4GgvgTHZ1oGk77x3hc07nFZquKsLNggSxn4aWtLZXgokm1MbVFrF10Mlp3Arjos_YYhqz0SWW7W7aN_4wtnlMhTqsOsZ9PmqLtj3qkcXPc&usqp=CAc" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Mochila para laptop 15.6" resistente al agua con puerto USB y compartimento para accesorios
+                </h3>
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 350.00
+                </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
+            </div>
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj1AqCP0bPNHQZvD9TJ1xCKEdTsUw09wpjuXKpSnsJug&s" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Audifonos inalámbricos Sony WH-CH510 Bluetooth con micrófono integrado y batería de larga duración
+                </h3>
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 250.90
+                </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
+            </div>
+            <div class="producto min-w-[280px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
+                <img 
+                src="data:image/jpeg;base64,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" 
+                class="w-full h-40 object-cover rounded"
+                >
+                <h3 class="titulo text-sm mt-2 line-clamp-2">
+                Zapatillas deportivas Nike Air Max 270 para hombre con diseño moderno y comodidad excepcional
+                </h3>
+                <p class="precio text-green-600 font-bold text-lg">
+                S/ 360.00
+                </p>
+                <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
+                    Agregar al carrito
+                </button>
             </div>
         </div>
     </section>
+    <main class="bg-gray-100">  
+        <section class="bg-yellow-300 py-10 text-center">
+            <h1 class="text-3xl font-bold mb-2">
+            Empieza a vender hoy
+            </h1>
+            <p class="text-gray-700 mb-4">
+            Sin comisión por 3 meses
+            </p>
+            <button class="bg-blue-500 text-white px-6 py-2 rounded-md">
+            Publicar es gratis
+            </button>
+        </section>
+        <section class="bg-white py-6 flex justify-around text-center">
+            <div>
+                <p class="font-bold text-xl">10M</p>
+                <p class="text-gray-500 text-sm">visitas</p>
+            </div>
+            <div>
+                <p class="font-bold text-xl">+3M</p>
+                <p class="text-gray-500 text-sm">usuarios</p>
+            </div>
+            <div>
+                <p class="font-bold text-xl">Envíos</p>
+                <p class="text-gray-500 text-sm">a todo el país</p>
+            </div>
+            <div>
+                <p class="font-bold text-xl">24/7</p>
+                <p class="text-gray-500 text-sm">soporte</p>
+            </div>
+        </section>
+        <section class="py-10 px-6 grid md:grid-cols-2 gap-6">
+            <div class="bg-yellow-300 p-6 rounded-md">
+                <h3 class="font-bold mb-2">Vende sin costo</h3>
+                <p class="text-sm">Sin comisión por 3 meses</p>
+            </div>
+            <div class="bg-yellow-300 p-6 rounded-md">
+                <h3 class="font-bold mb-2">Programa despegue</h3>
+                <p class="text-sm">Impulsa tu negocio</p>
+            </div>
+            <div class="bg-yellow-300 p-6 rounded-md">
+                <h3 class="font-bold mb-2">Tu tienda gratis</h3>
+                <p class="text-sm">Crea tu marca online</p>
+            </div>
+            <div class="bg-yellow-300 p-6 rounded-md">
+                <h3 class="font-bold mb-2">Onboarding rápido</h3>
+                <p class="text-sm">Empieza en minutos</p>
+            </div>
+        </section>
+        <section class="px-6 py-10 grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-md shadow p-4 flex gap-4">
+                <img src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1762887541213-7c3c08d0-bf30-11f0-a8a6-39ba85d4485c.png" class="rounded">
+                <div>
+                    <h3 class="font-bold">Publicidad</h3>
+                    <p class="text-sm text-gray-500">Llega a más clientes</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-md shadow p-4 flex gap-4">
+                <img src="https://http2.mlstatic.com/D_NQ_NP642793-MLA97992589357_112025-B.webp" class="rounded">
+            </div>
+        </section>
+        <section class="bg-white py-10 px-6">
+            <h2 class="text-2xl font-bold mb-6 text-center">
+            Empieza a vender
+            </h2>
+            <form id="formVender" class="max-w-md mx-auto flex flex-col gap-4">
+                <input type="text" id="nombre" placeholder="Nombre"
+                class="border p-2 rounded-md">
+                <input type="email" id="email" placeholder="Correo"
+                class="border p-2 rounded-md">
+                <input type="text" id="producto" placeholder="¿Qué venderás?"
+                class="border p-2 rounded-md">
+                <button type="submit"
+                class="bg-blue-500 text-white py-2 rounded-md">
+                    Empezar
+                </button>
+            </form>
+        </section>
+    </main>
+    <div id="modalCarrito"
+    class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white p-6 rounded-md w-[400px]">
+            <h2 class="text-xl font-bold mb-4">Tu carrito</h2>
+            <div id="listaCarrito" class="mb-4"></div>
+                <p id="total" class="font-bold mb-4"></p>
+                <button id="comprar"
+                class="bg-green-500 text-white px-4 py-2 rounded">
+                Comprar
+                </button>
+                <button id="cerrar" class="ml-2">
+                Cerrar
+                </button>
+        </div>
+    </div>
+  <script src="app.js"></script>
 </body>
+    
 </html>
