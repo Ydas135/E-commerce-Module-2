@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Laptop Gamer ASUS",
+    "price": 3500,
+    "category": "electronics",
+    "image": "https://via.placeholder.com/200",
+    "description": "Laptop potente para gaming y trabajo",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "title": "Smartphone Samsung Galaxy",
+    "price": 1800,
+    "category": "electronics",
+    "image": "https://via.placeholder.com/200",
+    "description": "Celular de alta gama con gran rendimiento",
+    "stock": 15
+  },
+  {
+    "id": 3,
+    "title": "Polo Deportivo Nike",
+    "price": 80,
+    "category": "clothing",
+    "image": "https://via.placeholder.com/200",
+    "description": "Ropa cómoda para entrenamiento",
+    "stock": 30
+  },
+  {
+    "id": 4,
+    "title": "Zapatillas Running Adidas",
+    "price": 250,
+    "category": "sports",
+    "image": "https://via.placeholder.com/200",
+    "description": "Perfectas para correr largas distancias",
+    "stock": 20
+  },
+  {
+    "id": 5,
+    "title": "Sofá 3 cuerpos",
+    "price": 1200,
+    "category": "home",
+    "image": "https://via.placeholder.com/200",
+    "description": "Cómodo sofá para sala",
+    "stock": 5
+  },
+  {
+    "id": 6,
+    "title": "Lámpara LED Moderna",
+    "price": 150,
+    "category": "home",
+    "image": "https://via.placeholder.com/200",
+    "description": "Iluminación elegante para tu hogar",
+    "stock": 25
+  },
+  {
+    "id": 7,
+    "title": "Balón de fútbol",
+    "price": 90,
+    "category": "sports",
+    "image": "https://via.placeholder.com/200",
+    "description": "Balón profesional",
+    "stock": 40
+  },
+  {
+    "id": 8,
+    "title": "Muñeca Barbie",
+    "price": 120,
+    "category": "toys",
+    "image": "https://via.placeholder.com/200",
+    "description": "Juguete clásico para niños",
+    "stock": 50
+  }
+]

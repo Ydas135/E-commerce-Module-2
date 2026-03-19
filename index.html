@@ -32,11 +32,11 @@
                     Categorias
                 </span>
                 <ul class="absolute left-0 top-6 bg-white shadow-lg rounded-md w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Electrònica</li>
-                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Ropa</li>
-                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Hogar</li>
-                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Deportes</li>
-                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer">Juguetes</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer " data-cat="electronics">Electrònica</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer" data-cat="clothing">Ropa</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer" data-cat="home">Hogar</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer" data-cat="sports">Deportes</li>
+                    <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer" data-cat="toys">Juguetes</li>
                     <li class="categoria px-4 py-2 hover:bg-gray-100 cursor-pointer" data-cat="all">
                     Todos
                     </li>
@@ -84,7 +84,7 @@
                 S/ 10000.00
                 </p>
                 <button class="agregar bg-blue-500 text-white w-full mt-2 py-1 rounded">
-                    Agregar al carrito
+                    Agregar 
                 </button>
             </div>
             <div class="producto min-w-[150px] bg-white rounded-md shadow-sm p-3 hover:shadow-md transition cursor-pointer">
@@ -194,6 +194,13 @@
             </div>
         </div>
     </section>
+    <section class="px-6 py-6">
+  <h2 class="text-xl font-semibold mb-4">Productos</h2>
+
+  <div id="contenedorProductos"
+    class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  </div>
+</section>
     <main class="bg-gray-100">  
         <section class="bg-yellow-300 py-10 text-center">
             <h1 class="text-3xl font-bold mb-2">
@@ -299,7 +306,21 @@
             </div>
         </div>
     </div>
-    
+    <!-- MODAL PRODUCTO -->
+<div id="modalProducto" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+
+  <div class="bg-white rounded-lg w-80 p-4 relative">
+
+    <!-- BOTÓN CERRAR -->
+    <button id="cerrarModalProducto" class="absolute top-2 right-2 text-xl">
+      ✖
+    </button>
+
+    <!-- CONTENIDO -->
+    <div id="contenidoModalProducto"></div>
+
+  </div>
+</div>
   <script src="app.js"></script>
 </body>
     

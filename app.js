@@ -40,7 +40,11 @@ botones.forEach(boton => {
     const producto = e.target.closest(".producto");
 
     const nombre = producto.querySelector(".titulo").textContent;
-    const precio = parseFloat(producto.querySelector(".precio").textContent);
+    const precioTexto = producto.querySelector(".precio").textContent;
+
+const precio = parseFloat(
+  precioTexto.replace("S/", "").replace(",", "").trim()
+);
 
     const existente = carrito.find(p => p.nombre === nombre);
 
@@ -215,5 +219,155 @@ function filtrarCategoria(categoria) {
     p.category === categoria
   );
 
+  console.log("Filtrados:", filtrados); // 👈 DEBUG
+
   renderProductos(filtrados);
+}
+
+async function obtenerProductos() {
+  const res = await fetch("./productos.json");
+  const data = await res.json();
+
+  productosGlobal = data;
+
+  renderProductos(data);
+}
+
+obtenerProductos();
+
+function renderProductos(productos) {
+
+  const contenedor = document.getElementById("contenedorProductos");
+
+  contenedor.innerHTML = "";
+
+  productos.forEach(prod => {
+
+    const card = document.createElement("div");
+
+    card.classList.add(
+      "producto",
+      "bg-white",
+      "rounded-lg",
+      "shadow-sm",
+      "hover:shadow-md",
+      "transition",
+      "p-3",
+      "flex",
+      "flex-col",
+      "justify-between"
+    );
+
+    card.innerHTML = `
+  <div class="w-full h-40 flex items-center justify-center">
+    <img src="${prod.image}" class="max-h-full object-contain">
+  </div>
+
+  <h3 class="titulo text-sm mt-2">${prod.title}</h3>
+
+  <p class="precio text-green-600 font-bold">
+    S/ ${prod.price}
+  </p>
+
+  <button 
+    class="verProducto mt-2 bg-blue-500 text-white py-1 rounded"
+    data-id="${prod.id}"
+  >
+    Agregar
+  </button>
+`;
+
+    contenedor.appendChild(card);
+  });
+
+  activarBotones();
+}
+
+function activarBotones() {
+
+  const botones = document.querySelectorAll(".verProducto");
+
+  botones.forEach(boton => {
+    boton.addEventListener("click", () => {
+
+      const id = boton.dataset.id;
+
+      const producto = productosGlobal.find(p => p.id == id);
+
+      abrirModalProducto(producto);
+    });
+  });
+
+}
+
+const modalProducto = document.getElementById("modalProducto");
+const contenidoModal = document.getElementById("contenidoModalProducto");
+
+function abrirModalProducto(prod) {
+
+  contenidoModal.innerHTML = `
+    <img src="${prod.image}" class="w-full h-40 object-contain">
+
+    <h2 class="text-lg font-bold mt-2">
+      ${prod.title}
+    </h2>
+
+    <p class="text-gray-600 text-sm">
+      ${prod.description}
+    </p>
+
+    <p class="text-green-600 font-bold text-xl mt-2">
+      S/ ${prod.price}
+    </p>
+
+    <button 
+      id="confirmarAgregar"
+      class="w-full mt-3 bg-blue-500 text-white py-2 rounded"
+    >
+      Añadir al carrito
+    </button>
+  `;
+
+  modalProducto.classList.remove("hidden");
+
+  // botón agregar al carrito
+  document.getElementById("confirmarAgregar")
+    .addEventListener("click", () => {
+
+      agregarAlCarritoDesdeModal(prod);
+
+      modalProducto.classList.add("hidden");
+    });
+}
+
+const cerrarModalProducto = document.getElementById("cerrarModalProducto");
+
+cerrarModalProducto.addEventListener("click", () => {
+  modalProducto.classList.add("hidden");
+});
+
+// cerrar al hacer click afuera
+modalProducto.addEventListener("click", (e) => {
+  if (e.target === modalProducto) {
+    modalProducto.classList.add("hidden");
+  }
+});
+
+function agregarAlCarritoDesdeModal(prod) {
+
+  const existente = carrito.find(p => p.nombre === prod.title);
+
+  if (existente) {
+    existente.cantidad++;
+  } else {
+    carrito.push({
+      nombre: prod.title,
+      precio: prod.price,
+      cantidad: 1
+    });
+  }
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  actualizarContador();
 }
